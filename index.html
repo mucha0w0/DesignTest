@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Test Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo">DesignTest</a>
+      <nav>
+        <ul class="header__nav">
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#cards">Cards</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#components">Components</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">Design System Test Page</h1>
+      <p class="hero__text">DESIGN.md に基づくコンポーネントの表示テスト用ページです。各セクションでパーツの見た目を確認できます。</p>
+      <button class="btn btn--primary btn--lg" id="modal-open">モーダルを開く</button>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Typography -->
+    <section class="section" id="typography">
+      <div class="container">
+        <span class="component-label">Typography</span>
+        <h2 class="section__title">タイポグラフィ</h2>
+        <p class="section__desc">見出し、本文、リスト、引用などのテキストスタイル</p>
+        <div class="typography-demo">
+          <h1>見出し H1</h1>
+          <h2>見出し H2</h2>
+          <h3>見出し H3</h3>
+          <h4>見出し H4</h4>
+          <p>これは本文テキストです。<a href="#">リンクテキスト</a>のスタイルも確認できます。シンプルで読みやすいタイポグラフィを目指しています。</p>
+          <blockquote>引用文のサンプルです。補足情報や強調したいテキストに使用します。</blockquote>
+          <ul>
+            <li>箇条書きリスト項目 1</li>
+            <li>箇条書きリスト項目 2</li>
+            <li>箇条書きリスト項目 3</li>
+          </ul>
+          <ol>
+            <li>番号付きリスト項目 1</li>
+            <li>番号付きリスト項目 2</li>
+          </ol>
+          <p>インラインコード: <code>const value = true;</code></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="section section--subtle" id="buttons">
+      <div class="container">
+        <span class="component-label">Buttons</span>
+        <h2 class="section__title">ボタン</h2>
+        <p class="section__desc">バリアントとサイズのバリエーション</p>
+        <div class="stack">
+          <div>
+            <p style="margin:0 0 0.5rem;font-size:0.875rem;color:var(--color-text-muted)">バリアント</p>
+            <div class="row">
+              <button class="btn btn--primary">Primary</button>
+              <button class="btn btn--secondary">Secondary</button>
+              <button class="btn btn--outline">Outline</button>
+              <button class="btn btn--ghost">Ghost</button>
+              <button class="btn btn--primary" disabled>Disabled</button>
+            </div>
+          </div>
+          <div>
+            <p style="margin:0 0 0.5rem;font-size:0.875rem;color:var(--color-text-muted)">サイズ</p>
+            <div class="row">
+              <button class="btn btn--primary btn--sm">Small</button>
+              <button class="btn btn--primary">Medium</button>
+              <button class="btn btn--primary btn--lg">Large</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badges -->
+    <section class="section" id="badges">
+      <div class="container">
+        <span class="component-label">Badges</span>
+        <h2 class="section__title">バッジ</h2>
+        <p class="section__desc">ステータスやカテゴリのラベル</p>
+        <div class="row">
+          <span class="badge">Default</span>
+          <span class="badge badge--primary">Primary</span>
+          <span class="badge badge--success">Success</span>
+          <span class="badge">Draft</span>
+          <span class="badge">New</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="section section--subtle" id="cards">
+      <div class="container">
+        <span class="component-label">Cards</span>
+        <h2 class="section__title">カード</h2>
+        <p class="section__desc">画像付きカードと横並びカード</p>
+        <div class="card-grid">
+          <article class="card">
+            <img class="card__image" src="https://picsum.photos/seed/card1/400/240" alt="" width="400" height="240">
+            <div class="card__body">
+              <h3 class="card__title">カードタイトル 1</h3>
+              <p class="card__text">カードの説明文です。画像付きの縦型カードレイアウトのサンプルです。</p>
+              <button class="btn btn--outline btn--sm">詳細を見る</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="https://picsum.photos/seed/card2/400/240" alt="" width="400" height="240">
+            <div class="card__body">
+              <h3 class="card__title">カードタイトル 2</h3>
+              <p class="card__text">ホバー時にシャドウが付くシンプルなカードデザインです。</p>
+              <button class="btn btn--outline btn--sm">詳細を見る</button>
+            </div>
+          </article>
+          <article class="card">
+            <img class="card__image" src="https://picsum.photos/seed/card3/400/240" alt="" width="400" height="240">
+            <div class="card__body">
+              <h3 class="card__title">カードタイトル 3</h3>
+              <p class="card__text">グリッドレイアウトで複数カードを並べた表示例です。</p>
+              <button class="btn btn--outline btn--sm">詳細を見る</button>
+            </div>
+          </article>
+        </div>
+        <hr class="divider">
+        <article class="card card--horizontal" style="max-width:600px">
+          <img class="card__image" src="https://picsum.photos/seed/cardh/280/200" alt="" width="280" height="200">
+          <div class="card__body">
+            <h3 class="card__title">横並びカード</h3>
+            <p class="card__text">画像とテキストを横に配置したカードレイアウトです。</p>
+            <button class="btn btn--primary btn--sm">アクション</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Accordion -->
+    <section class="section" id="accordion">
+      <div class="container">
+        <span class="component-label">Accordion</span>
+        <h2 class="section__title">アコーディオン</h2>
+        <p class="section__desc">折りたたみ可能なコンテンツセクション</p>
+        <div class="accordion" style="max-width:640px">
+          <div class="accordion__item is-open">
+            <button class="accordion__trigger" aria-expanded="true">
+              セクション 1
+              <svg class="accordion__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg>
+            </button>
+            <div class="accordion__panel">
+              アコーディオンのコンテンツです。クリックで開閉できます。よくあるFAQや詳細情報の表示に使います。
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              セクション 2
+              <svg class="accordion__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg>
+            </button>
+            <div class="accordion__panel">
+              2つ目のセクションの内容です。一度に1つだけ開く動作になっています。
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              セクション 3
+              <svg class="accordion__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg>
+            </button>
+            <div class="accordion__panel">
+              3つ目のセクションの内容です。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="section section--subtle" id="tabs">
+      <div class="container">
+        <span class="component-label">Tabs</span>
+        <h2 class="section__title">タブ</h2>
+        <p class="section__desc">コンテンツの切り替え</p>
+        <div class="tabs" style="max-width:640px">
+          <ul class="tabs__list" role="tablist">
+            <li><button class="tabs__btn is-active" role="tab" aria-selected="true">概要</button></li>
+            <li><button class="tabs__btn" role="tab" aria-selected="false">詳細</button></li>
+            <li><button class="tabs__btn" role="tab" aria-selected="false">設定</button></li>
+          </ul>
+          <div class="tabs__panel is-active" role="tabpanel">概要タブのコンテンツです。タブをクリックして切り替えできます。</div>
+          <div class="tabs__panel" role="tabpanel">詳細タブのコンテンツです。より詳しい情報を表示する領域です。</div>
+          <div class="tabs__panel" role="tabpanel">設定タブのコンテンツです。オプションや設定項目を配置します。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="section" id="forms">
+      <div class="container">
+        <span class="component-label">Forms</span>
+        <h2 class="section__title">フォーム</h2>
+        <p class="section__desc">入力フィールド、チェックボックス、ラジオボタン</p>
+        <form onsubmit="return false" style="max-width:400px">
+          <div class="form-group">
+            <label class="form-label" for="name">お名前</label>
+            <input class="form-input" type="text" id="name" placeholder="山田 太郎">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">メールアドレス</label>
+            <input class="form-input" type="email" id="email" placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="category">カテゴリ</label>
+            <select class="form-select" id="category">
+              <option>選択してください</option>
+              <option>カテゴリ A</option>
+              <option>カテゴリ B</option>
+              <option>カテゴリ C</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">メッセージ</label>
+            <textarea class="form-textarea" id="message" placeholder="お問い合わせ内容を入力"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-check">
+              <input type="checkbox" checked>
+              利用規約に同意する
+            </label>
+            <label class="form-check">
+              <input type="radio" name="plan" checked>
+              プラン A
+            </label>
+            <label class="form-check">
+              <input type="radio" name="plan">
+              プラン B
+            </label>
+          </div>
+          <button class="btn btn--primary" type="submit">送信する</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Alerts -->
+    <section class="section section--subtle" id="alerts">
+      <div class="container">
+        <span class="component-label">Alerts</span>
+        <h2 class="section__title">アラート</h2>
+        <p class="section__desc">通知・メッセージのバリエーション</p>
+        <div class="stack" style="max-width:640px">
+          <div class="alert alert--info">情報メッセージです。お知らせやヒントに使用します。</div>
+          <div class="alert alert--success">成功メッセージです。処理が完了したことを示します。</div>
+          <div class="alert alert--warning">警告メッセージです。注意が必要な場合に使用します。</div>
+          <div class="alert alert--error">エラーメッセージです。問題が発生したことを示します。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation components -->
+    <section class="section" id="components">
+      <div class="container">
+        <span class="component-label">Navigation</span>
+        <h2 class="section__title">ナビゲーション</h2>
+        <p class="section__desc">パンくずリストとページネーション</p>
+        <div class="stack">
+          <div>
+            <p style="margin:0 0 0.5rem;font-size:0.875rem;color:var(--color-text-muted)">Breadcrumb</p>
+            <ul class="breadcrumb">
+              <li><a href="#">ホーム</a></li>
+              <li><a href="#">カテゴリ</a></li>
+              <li>現在のページ</li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin:0 0 0.5rem;font-size:0.875rem;color:var(--color-text-muted)">Pagination</p>
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><span class="is-active">2</span></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="section section--subtle" id="table">
+      <div class="container">
+        <span class="component-label">Table</span>
+        <h2 class="section__title">テーブル</h2>
+        <p class="section__desc">データ一覧の表示</p>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>名前</th>
+                <th>ステータス</th>
+                <th>日付</th>
+                <th>金額</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>プロジェクト A</td>
+                <td><span class="badge badge--success">完了</span></td>
+                <td>2026-03-01</td>
+                <td>¥12,000</td>
+              </tr>
+              <tr>
+                <td>プロジェクト B</td>
+                <td><span class="badge">進行中</span></td>
+                <td>2026-03-15</td>
+                <td>¥8,500</td>
+              </tr>
+              <tr>
+                <td>プロジェクト C</td>
+                <td><span class="badge">下書き</span></td>
+                <td>2026-04-01</td>
+                <td>¥24,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avatar & Progress -->
+    <section class="section" id="misc">
+      <div class="container">
+        <span class="component-label">Misc</span>
+        <h2 class="section__title">その他</h2>
+        <p class="section__desc">アバターとプログレスバー</p>
+        <div class="stack">
+          <div>
+            <p style="margin:0 0 0.75rem;font-size:0.875rem;color:var(--color-text-muted)">Avatar</p>
+            <div class="avatar-group">
+              <div class="avatar">AB</div>
+              <div class="avatar avatar--lg">
+                <img src="https://picsum.photos/seed/avatar/112/112" alt="" width="56" height="56">
+              </div>
+              <div class="avatar">CD</div>
+            </div>
+          </div>
+          <div style="max-width:400px">
+            <p style="margin:0 0 0.75rem;font-size:0.875rem;color:var(--color-text-muted)">Progress</p>
+            <div class="progress">
+              <div class="progress__bar" style="width:65%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__heading">プロダクト</h3>
+          <ul class="footer__links">
+            <li><a href="#">機能</a></li>
+            <li><a href="#">料金</a></li>
+            <li><a href="#">アップデート</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">会社</h3>
+          <ul class="footer__links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">採用</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">リソース</h3>
+          <ul class="footer__links">
+            <li><a href="#">ドキュメント</a></li>
+            <li><a href="#">ブログ</a></li>
+            <li><a href="#">サポート</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 DesignTest. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-title">モーダルダイアログ</h2>
+        <button class="modal__close" id="modal-close" aria-label="閉じる">&times;</button>
+      </div>
+      <div class="modal__body">
+        モーダルウィンドウのサンプルです。確認ダイアログやフォームの表示に使用します。背景クリックまたは Esc キーで閉じられます。
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--ghost" id="modal-cancel">キャンセル</button>
+        <button class="btn btn--primary">確認</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
